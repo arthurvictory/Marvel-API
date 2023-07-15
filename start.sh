@@ -1,0 +1,1 @@
+gunicorn 'superhero_inventory:app'

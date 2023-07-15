@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container header-image">
+    <header class="row">
+        <div class="col-12 col-md-6" id="header-text">
+            <h2>Create your own Super Hero team!</h2>
+            <h5>Create an amazing API tool for superhero developers.</h5>
+            <div>
+                <button class="btn btn-primary">View Our Docs</button>
+                <button class="btn btn-primary">Join Our Slack</button>
+            </div>
+        </div>
+    </header>
+    <section class="row" id="features-section">
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/api.png" alt="API Image" id="api-image">
+            <h4>Dedicated API Routes</h4>
+            <p>
+                If you are a fan of using traditional API routes, we have those for you!
+            </p>
+        </div>
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/graphql.png" alt="GraphQL Image" id="graphql-image">
+            <h4>GraphQL API Routes</h4>
+            <p>
+                If you wan ALL the data from one endpoint, we have that too!
+            </p>
+        </div>
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/db.png" alt="Database Image" id="database-image">
+            <h4>Backed by a PostgreSQL Database</h4>
+            <p>
+                All data will be persisted inside of a secure Postgres Database.
+            </p>
+        </div>
+    </section>
+    <section class="row">
+        <div class="col-12 col-md-6">
+            <img src="../../static/images/comic_OMG.png" alt="OMG Image" id="comic-image">
+        </div>
+        <div class="col-12 col-md-6">
+            <h4>Talk with like minded superheroes!</h4>
+            <p>
+                Talk with other devs around the world and collab on projects with your data. Join
+                our Discord channel and give a star to the project on Github!
+            </p>
+            <div>
+                <buton class="btn btn-primary">View on Github</buton>
+                <buton class="btn btn-primary">Join Our Discord Channel</buton>
+            </div>
+        </div>
+    </section>
+    <footer class="row" id="footer">
+        <div class="col-2">
+            <img src="../../static/images/Marvel_comic_logo.png" alt="comic logo" id="footer-logo">
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Superheroes?</p>
+                <p>The Superhero Project</p>
+                <p>About</p>
+                <p>Contact</p>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>Help</h4>
+                <p>Support</p>
+                <p>Donate</p>
+                <p>Terms of Use</p>
+                <p>Privacy Policy</p>
+                <p>Sitemap</p>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>Community</h4>
+                <p>Discord Channel</p>
+                <p>Our Socials</p>
+                <p>Support</p>
+                <p>Information</p>
+                <p>Spread the word</p>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>Advertise</h4>
+                <p>Media Kit</p>
+                <p>Contact</p>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Why Comic Collective?</p>
+                <p>The Comic Collective Project</p>
+                <p>Donate</p>
+                <p>Spread the Word</p>
+                <p>Our Process</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+{% endblock content %}
