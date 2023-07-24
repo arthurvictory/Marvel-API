@@ -46,6 +46,7 @@ class User(db.Model, UserMixin):
         self.email = email
         self.token = self.set_token()
         self.username = username
+    
     def set_id(self):
         return str(uuid.uuid4())
     
@@ -62,16 +63,18 @@ class Superhero(db.Model):
     id = db.Column(db.String, primary_key = True)
     name = db.Column(db.String(150))
     description = db.Column(db.String(200), nullable = True)
-    appeared = db.Column(db.Numeric(precision = 10, scale = 2))
-    superpower = db.Column(db.String(150), nullable = True)
+    price = db.Column(db.Numeric(precision = 10, scale = 2))
+    appeared = db.Column(db.String(150), nullable = True)
+    superpowers = db.Column(db.String(150), nullable = True)
     user_token = db.Column(db.String, db.ForeignKey('user.token'), nullable = False)
 
-    def __init__(self, name, description, appeared, superpower, user_token):
+    def __init__(self, name, description, price, appeared, superpowers, user_token):
         self.id = self.set_id()
         self.name = name
         self.description = description
+        self.price = price
         self.appeared = appeared
-        self.superpower = superpower
+        self.superpowers = superpowers
         self.user_token = user_token
 
     def set_id(self):
@@ -82,7 +85,7 @@ class Superhero(db.Model):
     
 class SuperheroSchema(ma.Schema):
     class Meta:
-        fields = ['id', 'name', 'description', 'appeared in', 'superpower']
+        fields = ['id', 'name', 'description', 'price', 'appeared in', 'superpowers']
 
 superhero_schema = SuperheroSchema()
 superheroes_schema = SuperheroSchema(many = True)

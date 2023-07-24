@@ -20,11 +20,12 @@ def profile():
         if request.method == 'POST' and superheroform.validate_on_submit():
             name = superheroform.name.data
             description = superheroform.description.data
-            price = superheroform.price.data 
-            quality = superheroform.quality.data
+            price = superheroform.price.data
+            appeared = superheroform.appeared.data 
+            superpowers = superheroform.superpowers.data
             user_token = current_user.token
 
-            superhero = Superhero(name, description, price, quality, user_token)
+            superhero = Superhero(name, description, price, appeared, superpowers, user_token)
 
             db.session.add(superhero)
             db.session.commit()

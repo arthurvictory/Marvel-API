@@ -12,6 +12,7 @@ class UserLoginForm(FlaskForm):
 class SuperheroForm(FlaskForm):
     name = StringField('name')
     description = StringField('description')
-    appeared = DecimalField('comics appeared in')
-    superpower = StringField('Superpowers')
+    price = DecimalField('price')
+    appeared = StringField('comics appeared in')
+    superpowers = StringField('Superpowers')
     submit_button = SubmitField()

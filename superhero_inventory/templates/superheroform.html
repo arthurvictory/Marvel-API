@@ -9,13 +9,17 @@
             {{ form.description.label }}
             {{ form.description(class = 'form-control', placeholder = 'description')}}
         </fieldset>
+        <fieldset class = "price-field">
+            {{ form.price.label }}
+            {{ form.price(class = 'form-control', placeholder = 'price')}}
+        </fieldset>
         <fieldset class = "appeared-field">
             {{ form.appeared.label }}
             {{ form.appeared(class = 'form-control', placeholder = 'comics appeared in')}}
         </fieldset>
         <fieldset class = "superpowers">
-            {{ form.superpower.label }}
-            {{ form.superpower(class = 'form-control', placeholder = 'super powers')}}
+            {{ form.superpowers.label }}
+            {{ form.superpowers(class = 'form-control', placeholder = 'super powers')}}
         </fieldset>
         {{ form.submit_button(class = 'btn btn-primary btn-block mt-2') }}
     </div>

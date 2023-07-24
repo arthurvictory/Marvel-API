@@ -17,13 +17,14 @@ def create_superhero(our_user):
 
     name = request.json['name']
     description = request.json['description']
+    price = request.json['price']
     appeared = request.json['appeared']
     superpowers = request.json['superpowers']
     user_token = our_user.token
 
     print(f"User Token: {our_user.token}")
 
-    superhero = Superhero(name, description, appeared, superpowers, user_token)
+    superhero = Superhero(name, description, price, appeared, superpowers, user_token)
 
     db.session.add(superhero)
     db.session.commit()
@@ -61,6 +62,7 @@ def update_superhero(our_user, id):
 
     superhero.name = request.json['name']
     superhero.description = request.json['description']
+    superhero.price = request.json['price']
     superhero.appeared = request.json['appeared']
     superhero.superpowers = request.json['superpowers']
     superhero.user_token = our_user.token
